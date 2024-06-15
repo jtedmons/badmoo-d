@@ -379,6 +379,7 @@ textarea {
         width: 160px;
         float: left;
         background-color: var(--secondary);
+        margin-top: 15px;
     }
 
     nav ul {
@@ -430,6 +431,7 @@ textarea {
         width: 100%;
         float: none;
         text-align: center;
+        margin-top: 15px;
         background-color: var(--secondary);
     }
 
