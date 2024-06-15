@@ -376,24 +376,21 @@ textarea {
     }
 
     nav {
-        float: none;
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-        text-align: center;
+        width: 160px;
+        float: left;
+        background-color: var(--secondary);
     }
 
     nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
+        list-style: none;
         padding: 0;
     }
 
     nav li {
-        margin: 0 10px;
+        margin: 0;
         padding: 0.5em 0;
-        border-bottom: none;
+        border-bottom: 1px solid #002171;
     }
 
     h1 {
@@ -401,22 +398,24 @@ textarea {
         word-wrap: break-word; /* Allow text to wrap within the header */
     }
 
-    #homehero, #yurthero, #trailhero {
-        height: auto; /* Adjust height to auto to maintain aspect ratio */
-        background-size: contain; /* Ensure the image scales properly */
+    #homehero {
+        height: auto;
+        width: 100%;
+        background-size: cover;
         background-position: center;
     }
 
     #homeimage {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center align items */
+        align-items: center;
+        width: 100%;
     }
 
     .blurb {
+        width: 100%;
         padding: 10px;
         font-size: 14pt;
-        width: 100%; /* Make blurb take full width */
     }
 }
 
@@ -427,22 +426,21 @@ textarea {
     }
 
     nav {
-        float: none;
         width: 100%;
-        margin: 0;
-        padding: 10px;
+        float: none;
         text-align: center;
+        background-color: var(--secondary);
     }
 
     nav ul {
-        flex-direction: row;
-        justify-content: center;
+        flex-direction: column;
         padding: 0;
+        list-style: none;
     }
 
     nav li {
-        border-bottom: none;
-        margin: 0 10px;
+        border-bottom: 1px solid var(--accent);
+        margin: 0;
         padding: 5px 0;
     }
 
@@ -451,9 +449,10 @@ textarea {
         word-wrap: break-word; /* Allow text to wrap within the header */
     }
 
-    #homehero, #yurthero, #trailhero {
-        height: auto; /* Adjust height to auto to maintain aspect ratio */
-        background-size: contain; /* Ensure the image scales properly */
+    #homehero {
+        height: auto;
+        width: 100%;
+        background-size: cover;
         background-position: center;
     }
 
@@ -469,12 +468,13 @@ textarea {
     #homeimage {
         display: flex;
         flex-direction: column;
-        align-items: center; /* Center align items */
+        align-items: center;
+        width: 100%;
     }
 
     .blurb {
+        width: 100%;
         padding: 10px;
         font-size: 14pt;
-        width: 100%; /* Make blurb take full width */
     }
 }
