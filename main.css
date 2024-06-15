@@ -1,5 +1,5 @@
 :root {
-  /*  --text: #2b333a; */
+    /*  --text: #2b333a; */
     --text: #00011a;
     --background: #ffffff;
     --primary: #6a17d7;
@@ -102,7 +102,7 @@ h2 {
     text-shadow: 1px 1px 1px var(--secondary);
 }
 
-.blurb{
+.blurb {
     padding: 1px 20px 20px 30px;
     display: block;
     background: var(--secondary);
@@ -110,6 +110,7 @@ h2 {
     color: white;
     height: 500px;
     grid-area: blurb;
+    font-size: 16pt;
 }
 
 
@@ -147,7 +148,7 @@ footer {
 #wrapper {
     margin-left: auto;
     margin-right: auto;
-    width: 80%;
+    width: 100%;
     background-color: var(--background);
     min-width: 960px;
     max-width: 20480px;
@@ -157,26 +158,13 @@ footer {
 }
 
 
-.decor{
-    width: 100%;
-    padding: 0;
-    margin: 0;
-
-}
-#deco {
-    width: 50%;
-    height: 150px;
-   display: block;
-    margin: 0 auto;
-}
-
 #homehero {
     position: relative;
     height: 500px;
-    background-image: url('img/square.jpeg');
+    background-image: url('img/square_new.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin-top: 25px;
+    margin-top: 0px;
     margin-left: 20px;
     width: 100%;
     grid-area: hero;
@@ -199,16 +187,12 @@ footer {
     height: 10px;
     background: var(--accent);
     border-radius: 50%;
-    box-shadow: 0 0 0 2px var(--accent), /* Inner glow */
-    0 0 5px var(--accent),   /* Outer glow */
-    0 0 10px var(--primary),   /* Blur effect */
-    0 0 20px var(--accent),   /* Extended blur */
-    0 0 30px var(--primary);   /* Extensive glow */
+    box-shadow: 0 0 0 2px var(--accent), /* Inner glow */ 0 0 5px var(--accent), /* Outer glow */ 0 0 10px var(--primary), /* Blur effect */ 0 0 20px var(--accent), /* Extended blur */ 0 0 30px var(--primary); /* Extensive glow */
     transform: scale(1);
     animation: sparkle 2s infinite;
     top: calc(100% * var(--random-top));
     left: calc(100% * var(--random-left));
-    animation-delay: calc(var(--random-delay)*2s);
+    animation-delay: calc(var(--random-delay) * 2s);
 
 }
 
@@ -224,7 +208,7 @@ footer {
 }
 
 #hero {
-    max-height:500px;
+    max-height: 500px;
     margin-top: 25px;
     margin-left: 20px;
     width: 100%;
@@ -233,7 +217,7 @@ footer {
 
 #submissionhero {
     height: 500px;
-    background-image: url('img/homehero2.jpg');
+    background-image: url('img/round_new.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin: auto;
@@ -241,18 +225,18 @@ footer {
     grid-area: hero;
 }
 
-table {
+/*table {
     border: 2px solid var(--accent);
     border-collapse: collapse;
     margin-top: 25px;
     margin-left: 25px;
     background-color: lightgray;
-    color:var(--secondary);
+    color: var(--secondary);
 }
 
-th{
+th {
     background-color: var(--secondary);
-    color:var(--primary)
+    color: var(--primary)
 }
 
 td, th {
@@ -271,7 +255,7 @@ td.text {
 tr:nth-of-type(even) {
     background-color: lightslategray;
 }
-
+*/
 form {
     display: flex;
     flex-direction: column;
@@ -279,12 +263,12 @@ form {
     margin-left: 20px;
 }
 
-#contact{
+#contact {
     margin-left: 20px;
     margin-top: 20px;
 }
 
-#notice{
+#notice {
     margin-left: 20px;
     margin-top: 20px;
 }
@@ -293,21 +277,21 @@ input, textarea {
     margin-bottom: 0.5em;
 }
 
-input[type="submit"]{
+input[type="submit"] {
     width: fit-content;
     margin: auto;
     padding: 0.5em 1em;
 }
 
-textarea{
-    height:150px;
+textarea {
+    height: 150px;
 }
 
 .slideshow-container {
     max-width: 500px;
     position: relative;
     margin: 25px;
-    overflow:hidden;
+    overflow: hidden;
 }
 
 .mySlides {
@@ -369,13 +353,16 @@ textarea{
 }
 
 
-
 .fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
 
 @keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
 }
