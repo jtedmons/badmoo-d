@@ -366,3 +366,78 @@ textarea {
         opacity: 1
     }
 }
+
+/* Media Queries for Responsive Design */
+
+/* For tablets and larger mobile devices */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    nav {
+        font-size: 100%;
+        padding: 0.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    #homehero, #yurthero, #trailhero {
+        height: 250px;
+        background-size: cover;
+    }
+}
+
+/* For smaller mobile devices */
+@media (max-width: 480px) {
+    main {
+        padding: 5px;
+    }
+
+    nav {
+        font-size: 90%;
+        padding: 0.5em;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        border-bottom: none;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    #homehero, #yurthero, #trailhero {
+        height: 200px;
+        background-size: cover;
+    }
+
+    footer {
+        font-size: 65%;
+        padding: 1em;
+    }
+
+    #contact {
+        font-size: 80%;
+    }
+
+    .decor {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    #deco {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
