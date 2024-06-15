@@ -390,7 +390,7 @@ textarea {
     nav li {
         margin: 0;
         padding: 0.5em 0;
-        border-bottom: 1px solid #002171;
+        border-bottom: 1px solid var(--accent);
     }
 
     h1 {
@@ -399,7 +399,7 @@ textarea {
     }
 
     #homehero {
-        height: auto;
+        height: 500px;
         width: 100%;
         background-size: cover;
         background-position: center;
@@ -416,6 +416,7 @@ textarea {
         width: 100%;
         padding: 10px;
         font-size: 14pt;
+        height: 350px;
     }
 }
 
@@ -450,9 +451,9 @@ textarea {
     }
 
     #homehero {
-        height: auto;
+        height: 300px;
         width: 100%;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
     }
 
@@ -476,5 +477,6 @@ textarea {
         width: 100%;
         padding: 10px;
         font-size: 14pt;
+        height: 300px;
     }
 }
