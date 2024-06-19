@@ -1,7 +1,10 @@
 :root {
     /*  --text: #2b333a; */
     --text: #00011a;
-    --background: #ffffff;
+    /*--background: #ffffff;
+        --background: #a34cee;
+        --accent: #d200f2;*/
+    --background: #820e86;
     --primary: #6a17d7;
     --secondary: #00011a;
     --accent: #d200f2;
@@ -84,7 +87,7 @@ nav :visited {
 }
 
 nav :hover {
-    color: var(--accent);
+    color: #002171;
 }
 
 
@@ -161,7 +164,7 @@ footer {
 #homehero {
     position: relative;
     height: 500px;
-    background-image: url('img/square_new.jpg');
+    background-image: url('img/logoFinal.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     margin-top: 0px;
