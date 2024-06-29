@@ -28,7 +28,7 @@ header {
     height: 120px;
     text-align: center;
     padding-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     grid-area: header;
 }
 
@@ -45,12 +45,14 @@ nav {
     font-weight: bold;
     padding: 1.5em;
     font-size: 100%;
-    float: left;
-    width: 160px;
-    background-color: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--primary);
     color: var(--accent);
-    margin-top: 35px;
     grid-area: nav;
+    height: 15px;
 }
 
 nav a {
@@ -58,14 +60,17 @@ nav a {
 }
 
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin-top: 20px;
     font-size: 1.2em;
 }
 
 nav li {
     padding-bottom: 0.9em;
+    margin: 0 15px;
 }
 
 nav a:link {
@@ -73,7 +78,7 @@ nav a:link {
 }
 
 nav a:visited {
-    color: var(--primary);
+    color: var(--secondary);
 }
 
 nav a:hover {
@@ -94,6 +99,7 @@ h2 {
     text-shadow: 1px 1px 1px var(--secondary);
 }
 
+
 .blurb {
     padding: 1px 20px 20px 30px;
     display: block;
@@ -102,18 +108,29 @@ h2 {
     color: white;
     font-size: 16pt;
     grid-area: blurb;
+    width: 85%;
 }
 
 #homeimage {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    grid-template-areas: "hero blurb";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+#submissionImage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     margin-bottom: 25px;
 }
 
 footer {
     font-size: 75%;
+    display: flex;
+    flex-direction: column;
     font-style: italic;
     text-align: center;
     font-family: Georgia, "Times New Roman", serif;
@@ -134,7 +151,7 @@ footer {
 #wrapper {
     margin: 0 auto;
     background-color: var(--background);
-    box-shadow: var(--accent) 1px 1px 0px, var(--accent) -1px -1px 0px;
+    box-shadow: var(--accent) 1px 1px 0, var(--accent) -1px -1px 0;
     border: 1px solid var(--secondary);
 }
 
@@ -142,9 +159,11 @@ footer {
     position: relative;
     height: 500px;
     background-image: url('img/logoFinal.png');
-    background-size: 100% 100%      ;
+    background-size: contain;
+    width: 100%;
     background-repeat: no-repeat;
-    margin-top: 0px;
+    background-position: center;
+    margin-top: 0;
     margin-left: 20px;
     grid-area: hero;
 }
@@ -193,32 +212,66 @@ footer {
 }
 
 #submissionhero {
+    position: relative;
     height: 500px;
-    background-image: url('img/round_new.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    margin: auto;
     width: 100%;
+    background-image: url('img/logoRound.png');
+    background-size: 900px 900px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-y: -155px;
+    margin-top: 0;
+    margin-left: 20px;
     grid-area: hero;
 }
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    height: 500px; /* Ensure the container takes the full height of the viewport */
+    text-align: center; /* Center the text inside the form */
+    width: 1500px;
+}
+
 
 form {
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    align-items: center; /* Center horizontally */
+    max-width: 50%;
+    width: 100%; /* Ensure the form takes the full width available */
+    margin: 0 auto; /* Center the form within its container */
+    padding: 20px; /* Add some padding for better appearance */
+    background-color: var(--primary); /* Optional: Add background color for better visibility */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow for better appearance */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    color:var(--accent);
+    text-shadow: 1px 1px 1px var(--primary);
+    font-size: 20px;
+}
+
+#formSection{
+    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #contact, #notice {
-    margin: 20px;
+    font-family: Georgia, "Times New Roman", serif;
+    color: var(--secondary);
+    text-shadow: 1px 1px 1px var(--primary);
 }
 
-input, textarea {
+input, textarea, select {
     margin-bottom: 0.5em;
+    width: 100%; /* Make the inputs take full width */
+    max-width: 400px; /* Optional: Set a maximum width */
 }
 
 input[type="submit"] {
     width: fit-content;
-    margin: auto;
+    margin: 20px auto;
     padding: 0.5em 1em;
 }
 
@@ -230,7 +283,7 @@ textarea {
 /* Media Queries for Responsive Design */
 
 /* For tablets and larger mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     main {
         padding: 10px;
     }
@@ -238,31 +291,33 @@ textarea {
     nav {
         width: 100%;
         float: left;
-        background-color: var(--secondary);
-        margin-top: 15px;
+        background-color: var(--primary);
+        height: 35px;
+        justify-content: center;
+        align-items: center;
     }
 
     nav ul {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
         list-style: none;
-        padding: 0;
+        padding: 1em;
     }
 
     nav li {
-        margin: 0;
+        margin: 0 15px;
         padding: 0.5em 0;
-        border-bottom: 1px solid var(--accent);
     }
 
     h1 {
         font-size: 1.75em;
-        word-wrap: break-word;
+        word-wrap:break-word
     }
 
     #homehero {
-        height: 250px;
+        height: 300px;
         width: 100%;
-        background-size: cover;
+        background-size: contain;
         background-position: center;
     }
 
@@ -272,6 +327,22 @@ textarea {
         align-items: center;
         width: 100%;
     }
+
+    #submissionhero {
+        height: 300px;
+        width: 100%;
+        background-size: 450px 450px;
+        background-position: center;
+    }
+
+    #submissionimage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+
 
     .blurb {
         width: 100%;
@@ -288,22 +359,23 @@ textarea {
 
     nav {
         width: 100%;
-        float: none;
+        float: left;
         text-align: center;
-        margin-top: 15px;
-        background-color: var(--secondary);
+        background-color: var(--primary);
+        height: 25px;
     }
 
     nav ul {
-        flex-direction: column;
+        display: flex;
+        justify-content: center;
         padding: 0;
         list-style: none;
     }
 
     nav li {
-        border-bottom: 1px solid var(--accent);
-        margin: 0;
-        padding: 5px 0;
+        margin: 0 15px;
+        padding-bottom: 25px;
+
     }
 
     h1 {
@@ -318,6 +390,13 @@ textarea {
         background-position: center;
     }
 
+    #submissionhero {
+        height: 200px;
+        width: 100%;
+        background-size: 300px 300px;
+        background-position-x: 35px;
+    }
+
     footer {
         font-size: 60%;
         padding: 1em;
@@ -327,7 +406,7 @@ textarea {
         font-size: 75%;
     }
 
-    #homeimage {
+    #submissionimage {
         display: flex;
         flex-direction: column;
         align-items: center;
